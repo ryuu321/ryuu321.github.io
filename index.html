@@ -4,389 +4,421 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>真柄 龍聖 — AI SaaS Builder</title>
-  <meta name="description" content="日本中小企業向けAI文書生成SaaSを開発しています。TextSeriesシリーズ開発者。">
+  <meta name="description" content="日本の中小企業・士業向けにAI文書生成SaaSを連続開発。TextSeriesシリーズ11製品。受託開発も受付中。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
-    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
-    .card-hover:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
-    .tag { display: inline-block; font-size: 0.7rem; padding: 2px 8px; border-radius: 9999px; font-weight: 600; }
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-hero { background: radial-gradient(ellipse at 30% 50%, #1e3a5f 0%, #0f172a 60%); }
+    .gradient-text { background: linear-gradient(90deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .card-hover { transition: transform 0.2s, border-color 0.2s; }
+    .card-hover:hover { transform: translateY(-4px); border-color: #334155; }
+    .tag { display: inline-block; font-size: 0.65rem; padding: 2px 8px; border-radius: 9999px; font-weight: 700; letter-spacing: 0.03em; }
+    .nav-link { transition: color 0.15s; }
+    .nav-link:hover { color: #fff; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .dot-grid { background-image: radial-gradient(circle, #1e293b 1px, transparent 1px); background-size: 28px 28px; }
+    details summary { list-style: none; cursor: pointer; }
+    details summary::-webkit-details-marker { display: none; }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-200 font-sans">
+<body class="bg-slate-950 text-slate-300">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800/50">
+    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+      <a href="#" class="text-white font-bold text-sm tracking-tight">真柄 龍聖</a>
+      <div class="hidden md:flex items-center gap-6 text-xs text-slate-400">
+        <a href="#products" class="nav-link">製品</a>
+        <a href="#service" class="nav-link">受託開発</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="mailto:ryuumg03@gmail.com"
+           class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-1.5 rounded-full transition text-xs font-semibold">
+          相談する
+        </a>
+      </div>
+    </div>
+  </nav>
 
   <!-- Hero -->
-  <section class="gradient-bg min-h-screen flex flex-col justify-center px-6 py-24">
-    <div class="max-w-3xl mx-auto">
-      <p class="text-blue-400 text-sm font-mono mb-4 tracking-widest">RYUSEI MAGARA / 真柄 龍聖</p>
-      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
-        AI SaaS Builder
+  <section class="gradient-hero dot-grid min-h-screen flex flex-col justify-center px-6 pt-14">
+    <div class="max-w-4xl mx-auto py-24">
+      <div class="inline-flex items-center gap-2 bg-blue-950/60 border border-blue-800/50 rounded-full px-4 py-1.5 text-xs text-blue-400 font-medium mb-8">
+        <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+        TextSeries — 11製品 連続リリース中
+      </div>
+      <h1 class="text-5xl md:text-7xl font-extrabold leading-none mb-6 text-white tracking-tight">
+        書類作業を<br>
+        <span class="gradient-text">AIで30秒に。</span>
       </h1>
       <p class="text-slate-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
-        日本の中小企業・士業向けに、AI文書生成SaaSを開発しています。<br>
-        月数万円の書類作業を30秒に圧縮するツール群 <strong class="text-white">TextSeries</strong> を連続リリース中。
+        日本の中小企業・士業が毎回ゼロから作っている書類をAIで自動化。<br>
+        社労士・行政書士・介護・建設・電気工事など業種特化のSaaSを量産しています。
       </p>
-      <div class="flex flex-wrap gap-4">
-        <a href="mailto:ryuumg03@gmail.com"
-           class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full transition text-sm">
-          お問い合わせ
+      <div class="flex flex-wrap gap-3">
+        <a href="#service"
+           class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-7 py-3 rounded-full transition text-sm">
+          受託開発を相談する
         </a>
-        <a href="https://note.com"
-           target="_blank"
-           class="border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white font-semibold px-6 py-3 rounded-full transition text-sm">
-          note を読む →
+        <a href="#products"
+           class="border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white font-semibold px-7 py-3 rounded-full transition text-sm">
+          製品を見る →
         </a>
+      </div>
+
+      <!-- mini stats -->
+      <div class="flex flex-wrap gap-8 mt-16 text-sm">
+        <div>
+          <p class="text-3xl font-bold text-white">11</p>
+          <p class="text-slate-500 text-xs mt-0.5">製品リリース済み</p>
+        </div>
+        <div class="border-l border-slate-800 pl-8">
+          <p class="text-3xl font-bold text-white">100</p>
+          <p class="text-slate-500 text-xs mt-0.5">業種候補リスト</p>
+        </div>
+        <div class="border-l border-slate-800 pl-8">
+          <p class="text-3xl font-bold text-white">¥0</p>
+          <p class="text-slate-500 text-xs mt-0.5">インフラ費用/月</p>
+        </div>
+        <div class="border-l border-slate-800 pl-8">
+          <p class="text-3xl font-bold text-white">30秒</p>
+          <p class="text-slate-500 text-xs mt-0.5">書類生成時間</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- About -->
-  <section class="py-20 px-6 bg-slate-900">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-bold mb-8 text-white">About</h2>
-      <div class="grid md:grid-cols-2 gap-8 text-slate-400 text-sm leading-relaxed">
-        <div>
-          <p class="mb-4">
-            法的リスクなし・即収益化・スケール可能の3原則で事業を設計。
-            専門家が毎回ゼロから作っている書類作成をAIで自動化し、
-            <strong class="text-slate-200">月額¥8,980〜</strong>のSaaSとして提供しています。
-          </p>
-          <p>
-            ターゲットは社会保険労務士・行政書士・税理士・介護事業所・建設業者など、
-            書類業務が多く・IT化が遅れている日本の中小企業・士業事務所。
-          </p>
+  <section class="py-24 px-6 bg-slate-900">
+    <div class="max-w-4xl mx-auto fade-in">
+      <p class="text-blue-400 text-xs font-mono mb-3 tracking-widest uppercase">About</p>
+      <h2 class="text-3xl font-bold mb-10 text-white">なぜこれを作っているか</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
+          <div class="text-2xl mb-4">⚖️</div>
+          <h3 class="font-semibold text-white mb-2">法的リスクなし</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">「ツール提供者」に徹した設計。判断は必ずユーザーが行う。専門家責任を負わない。</p>
         </div>
-        <div>
-          <p class="mb-4">
-            技術スタック: Python / Streamlit / Supabase / Stripe / Google Gemini API / GitHub Actions
-          </p>
-          <p>
-            GTM: コールドメール（30件/日・特定電子メール法準拠）で獲得した見込み客に
-            無料トライアル→有料転換のファネルを自動化。
-          </p>
+        <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
+          <div class="text-2xl mb-4">📈</div>
+          <h3 class="font-semibold text-white mb-2">即収益化</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">コールドメール30件/日のGTMを自動化。無料トライアル→有料転換のファネルを初日から動かす。</p>
         </div>
+        <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700/50">
+          <div class="text-2xl mb-4">🔒</div>
+          <h3 class="font-semibold text-white mb-2">解約されにくい</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">使うたびに書類履歴・顧客データが蓄積。乗り換えると全部消えるデータロック設計。</p>
+        </div>
+      </div>
+      <div class="mt-8 bg-slate-800/30 rounded-xl p-5 border border-slate-700/30 text-sm text-slate-400">
+        <span class="text-slate-300 font-medium">技術スタック: </span>
+        Python / Streamlit / Supabase / Stripe / Google Gemini API / GitHub Actions — すべて無料枠で運用
       </div>
     </div>
   </section>
 
   <!-- Products -->
-  <section class="py-20 px-6 bg-slate-950">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-2xl font-bold mb-2 text-white">TextSeries</h2>
-      <p class="text-slate-500 text-sm mb-10">AI文書生成SaaS群 — 業種特化・月額¥8,980〜</p>
-      <div class="grid md:grid-cols-2 gap-4">
+  <section id="products" class="py-24 px-6 bg-slate-950">
+    <div class="max-w-5xl mx-auto fade-in">
+      <p class="text-blue-400 text-xs font-mono mb-3 tracking-widest uppercase">Products</p>
+      <h2 class="text-3xl font-bold mb-2 text-white">TextSeries</h2>
+      <p class="text-slate-500 text-sm mb-10">業種特化 AI 文書生成SaaS — 月額¥8,980〜 / 無料トライアル5件</p>
 
-        <!-- SharoText -->
-        <a href="https://ryuu321.github.io/ai-holdings/docs/sharotext.html"
-           target="_blank"
-           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
-          <div class="flex items-center justify-between mb-3">
-            <span class="font-bold text-white">SharoText</span>
-            <span class="tag bg-green-900 text-green-400">稼働中</span>
+      <!-- 稼働中 -->
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-widest mb-3">稼働中</p>
+      <div class="grid md:grid-cols-3 gap-3 mb-8">
+        <a href="https://ryuu321.github.io/ai-holdings/docs/sharotext.html" target="_blank"
+           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block group">
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <span class="text-xl">👔</span>
+              <p class="font-bold text-white mt-1">SharoText</p>
+              <p class="text-slate-500 text-xs">社会保険労務士事務所</p>
+            </div>
+            <span class="tag bg-emerald-950 text-emerald-400">稼働中</span>
           </div>
-          <p class="text-slate-500 text-xs mb-2">社会保険労務士事務所</p>
-          <p class="text-slate-400 text-sm">就業規則・36協定届・助成金申請書の文案をAIが自動生成</p>
+          <p class="text-slate-400 text-xs leading-relaxed">就業規則・36協定届・助成金申請書</p>
         </a>
-
-        <!-- GyoText -->
-        <a href="https://ryuu321.github.io/ai-holdings/docs/gyotext.html"
-           target="_blank"
+        <a href="https://ryuu321.github.io/ai-holdings/docs/gyotext.html" target="_blank"
            class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
-          <div class="flex items-center justify-between mb-3">
-            <span class="font-bold text-white">GyoText</span>
-            <span class="tag bg-green-900 text-green-400">稼働中</span>
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <span class="text-xl">📜</span>
+              <p class="font-bold text-white mt-1">GyoText</p>
+              <p class="text-slate-500 text-xs">行政書士事務所</p>
+            </div>
+            <span class="tag bg-emerald-950 text-emerald-400">稼働中</span>
           </div>
-          <p class="text-slate-500 text-xs mb-2">行政書士事務所</p>
-          <p class="text-slate-400 text-sm">許認可申請書・定款・各種届出書の文案をAIが自動生成</p>
+          <p class="text-slate-400 text-xs leading-relaxed">許認可申請書・定款・各種届出書</p>
         </a>
-
-        <!-- CareText -->
-        <a href="https://ryuu321.github.io/ai-holdings/docs/caretext.html"
-           target="_blank"
+        <a href="https://ryuu321.github.io/ai-holdings/docs/kentext.html" target="_blank"
            class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
-          <div class="flex items-center justify-between mb-3">
-            <span class="font-bold text-white">CareText</span>
-            <span class="tag bg-blue-900 text-blue-400">デプロイ済み</span>
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <span class="text-xl">🏗️</span>
+              <p class="font-bold text-white mt-1">KenText</p>
+              <p class="text-slate-500 text-xs">建設設計事務所</p>
+            </div>
+            <span class="tag bg-emerald-950 text-emerald-400">稼働中</span>
           </div>
-          <p class="text-slate-500 text-xs mb-2">訪問介護事業所</p>
-          <p class="text-slate-400 text-sm">個別支援計画・サービス提供記録・ヒヤリハット報告書</p>
+          <p class="text-slate-400 text-xs leading-relaxed">確認申請書・仕様書・工事監理報告書</p>
         </a>
-
-        <!-- KenText -->
-        <a href="https://ryuu321.github.io/ai-holdings/docs/kentext.html"
-           target="_blank"
+        <a href="https://ryuu321.github.io/ai-holdings/docs/fudotext.html" target="_blank"
            class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
-          <div class="flex items-center justify-between mb-3">
-            <span class="font-bold text-white">KenText</span>
-            <span class="tag bg-green-900 text-green-400">稼働中</span>
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <span class="text-xl">🏠</span>
+              <p class="font-bold text-white mt-1">FudoText</p>
+              <p class="text-slate-500 text-xs">不動産仲介会社</p>
+            </div>
+            <span class="tag bg-emerald-950 text-emerald-400">稼働中</span>
           </div>
-          <p class="text-slate-500 text-xs mb-2">建設設計事務所</p>
-          <p class="text-slate-400 text-sm">確認申請書・仕様書・工事監理報告書の文案をAIが自動生成</p>
+          <p class="text-slate-400 text-xs leading-relaxed">物件紹介文・重要事項説明・契約書類</p>
         </a>
-
-        <!-- TaxText -->
-        <a href="https://ryuu321.github.io/ai-holdings/docs/taxtext.html"
-           target="_blank"
+        <a href="https://ryuu321.github.io/ai-holdings/docs/caretext.html" target="_blank"
            class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
-          <div class="flex items-center justify-between mb-3">
-            <span class="font-bold text-white">TaxText</span>
-            <span class="tag bg-blue-900 text-blue-400">デプロイ済み</span>
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <span class="text-xl">🤲</span>
+              <p class="font-bold text-white mt-1">CareText</p>
+              <p class="text-slate-500 text-xs">訪問介護事業所</p>
+            </div>
+            <span class="tag bg-blue-950 text-blue-400">デプロイ済み</span>
           </div>
-          <p class="text-slate-500 text-xs mb-2">税理士事務所</p>
-          <p class="text-slate-400 text-sm">税務申告書・経営計画書・融資相談用資料の文案をAIが自動生成</p>
+          <p class="text-slate-400 text-xs leading-relaxed">個別支援計画・サービス提供記録</p>
         </a>
-
-        <!-- FudoText -->
-        <a href="https://ryuu321.github.io/ai-holdings/docs/fudotext.html"
-           target="_blank"
+        <a href="https://ryuu321.github.io/ai-holdings/docs/taxtext.html" target="_blank"
            class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
-          <div class="flex items-center justify-between mb-3">
-            <span class="font-bold text-white">FudoText</span>
-            <span class="tag bg-green-900 text-green-400">稼働中</span>
+          <div class="flex items-start justify-between mb-3">
+            <div>
+              <span class="text-xl">🧾</span>
+              <p class="font-bold text-white mt-1">TaxText</p>
+              <p class="text-slate-500 text-xs">税理士事務所</p>
+            </div>
+            <span class="tag bg-blue-950 text-blue-400">デプロイ済み</span>
           </div>
-          <p class="text-slate-500 text-xs mb-2">不動産仲介会社</p>
-          <p class="text-slate-400 text-sm">物件紹介文・重要事項説明・契約書類の文案をAIが自動生成</p>
+          <p class="text-slate-400 text-xs leading-relaxed">税務申告書・経営計画書・融資相談用資料</p>
         </a>
+      </div>
 
-        <!-- DayText -->
-        <a href="https://ryuu321.github.io/ai-holdings/docs/daytext.html"
-           target="_blank"
-           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
-          <div class="flex items-center justify-between mb-3">
-            <span class="font-bold text-white">DayText</span>
-            <span class="tag bg-yellow-900 text-yellow-400">リリース準備中</span>
-          </div>
-          <p class="text-slate-500 text-xs mb-2">通所介護（デイサービス）</p>
-          <p class="text-slate-400 text-sm">個別機能訓練計画書・モニタリング報告書の文案をAIが自動生成</p>
+      <!-- リリース準備中 -->
+      <p class="text-xs text-slate-500 font-semibold uppercase tracking-widest mb-3">リリース準備中</p>
+      <div class="grid md:grid-cols-5 gap-3">
+        <a href="https://ryuu321.github.io/ai-holdings/docs/daytext.html" target="_blank"
+           class="card-hover bg-slate-900/60 rounded-xl p-4 border border-slate-800/60 block">
+          <span class="text-lg">🌅</span>
+          <p class="font-semibold text-slate-200 text-sm mt-2">DayText</p>
+          <p class="text-slate-500 text-xs mt-0.5">通所介護</p>
         </a>
-
-        <!-- PharmText -->
-        <a href="https://ryuu321.github.io/ai-holdings/docs/pharmtext.html"
-           target="_blank"
-           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
-          <div class="flex items-center justify-between mb-3">
-            <span class="font-bold text-white">PharmText</span>
-            <span class="tag bg-yellow-900 text-yellow-400">リリース準備中</span>
-          </div>
-          <p class="text-slate-500 text-xs mb-2">調剤薬局</p>
-          <p class="text-slate-400 text-sm">薬歴（SOAP形式）・服薬指導記録の文案をAIが自動生成</p>
+        <a href="https://ryuu321.github.io/ai-holdings/docs/pharmtext.html" target="_blank"
+           class="card-hover bg-slate-900/60 rounded-xl p-4 border border-slate-800/60 block">
+          <span class="text-lg">💊</span>
+          <p class="font-semibold text-slate-200 text-sm mt-2">PharmText</p>
+          <p class="text-slate-500 text-xs mt-0.5">調剤薬局</p>
         </a>
-
-        <!-- CmText -->
-        <a href="https://ryuu321.github.io/ai-holdings/docs/cmtext.html"
-           target="_blank"
-           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
-          <div class="flex items-center justify-between mb-3">
-            <span class="font-bold text-white">CmText</span>
-            <span class="tag bg-yellow-900 text-yellow-400">リリース準備中</span>
-          </div>
-          <p class="text-slate-500 text-xs mb-2">居宅介護支援（ケアマネ）</p>
-          <p class="text-slate-400 text-sm">ケアプラン・アセスメントシート・モニタリング記録をAIが自動生成</p>
+        <a href="https://ryuu321.github.io/ai-holdings/docs/cmtext.html" target="_blank"
+           class="card-hover bg-slate-900/60 rounded-xl p-4 border border-slate-800/60 block">
+          <span class="text-lg">📊</span>
+          <p class="font-semibold text-slate-200 text-sm mt-2">CmText</p>
+          <p class="text-slate-500 text-xs mt-0.5">居宅介護支援</p>
         </a>
-
-        <!-- KanriText -->
-        <a href="https://ryuu321.github.io/ai-holdings/docs/kanritext.html"
-           target="_blank"
-           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
-          <div class="flex items-center justify-between mb-3">
-            <span class="font-bold text-white">KanriText</span>
-            <span class="tag bg-yellow-900 text-yellow-400">リリース準備中</span>
-          </div>
-          <p class="text-slate-500 text-xs mb-2">不動産管理会社</p>
-          <p class="text-slate-400 text-sm">管理委託契約書・修繕提案書・入退去精算書をAIが自動生成</p>
+        <a href="https://ryuu321.github.io/ai-holdings/docs/kanritext.html" target="_blank"
+           class="card-hover bg-slate-900/60 rounded-xl p-4 border border-slate-800/60 block">
+          <span class="text-lg">🏢</span>
+          <p class="font-semibold text-slate-200 text-sm mt-2">KanriText</p>
+          <p class="text-slate-500 text-xs mt-0.5">不動産管理</p>
         </a>
-
-        <!-- DenkiText -->
-        <a href="https://ryuu321.github.io/ai-holdings/docs/denkitext.html"
-           target="_blank"
-           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
-          <div class="flex items-center justify-between mb-3">
-            <span class="font-bold text-white">DenkiText</span>
-            <span class="tag bg-yellow-900 text-yellow-400">リリース準備中</span>
-          </div>
-          <p class="text-slate-500 text-xs mb-2">電気工事業者</p>
-          <p class="text-slate-400 text-sm">電気工事完了報告書・検査成績書・施工計画書をAIが自動生成</p>
+        <a href="https://ryuu321.github.io/ai-holdings/docs/denkitext.html" target="_blank"
+           class="card-hover bg-slate-900/60 rounded-xl p-4 border border-slate-800/60 block">
+          <span class="text-lg">⚡</span>
+          <p class="font-semibold text-slate-200 text-sm mt-2">DenkiText</p>
+          <p class="text-slate-500 text-xs mt-0.5">電気工事業者</p>
         </a>
-
       </div>
     </div>
   </section>
 
   <!-- Service -->
-  <section class="py-20 px-6 bg-slate-900">
-    <div class="max-w-3xl mx-auto">
+  <section id="service" class="py-24 px-6 bg-slate-900">
+    <div class="max-w-4xl mx-auto fade-in">
       <p class="text-blue-400 text-xs font-mono mb-3 tracking-widest uppercase">Service</p>
-      <h2 class="text-2xl font-bold mb-2 text-white">御社専用AIツールを作ります</h2>
-      <p class="text-slate-400 text-sm mb-10">TextSeriesと同じ仕組みで、あなたの業種・業務に特化したAI文書生成SaaSをゼロから構築します。</p>
+      <h2 class="text-3xl font-bold mb-2 text-white">御社専用AIツールを作ります</h2>
+      <p class="text-slate-400 text-sm mb-12">TextSeriesと同じ仕組みで、あなたの業種・業務に特化したAI文書生成SaaSをゼロから構築。開発・GTM・運用まですべて込みです。</p>
 
-      <div class="grid md:grid-cols-3 gap-5 mb-10">
-        <div class="bg-slate-800 rounded-2xl p-7 border border-slate-700">
-          <p class="text-slate-400 text-xs uppercase tracking-widest mb-3">初期費用</p>
-          <p class="text-4xl font-bold text-white mb-1">¥300,000</p>
-          <p class="text-slate-500 text-sm mb-6">一回限り・税別</p>
-          <ul class="space-y-2 text-sm text-slate-400">
-            <li class="flex gap-2"><span class="text-blue-400">✓</span> 業務ヒアリング・要件定義</li>
-            <li class="flex gap-2"><span class="text-blue-400">✓</span> AIプロンプト設計（業種特化）</li>
-            <li class="flex gap-2"><span class="text-blue-400">✓</span> Webアプリ開発・デプロイ</li>
-            <li class="flex gap-2"><span class="text-blue-400">✓</span> 決済機能（Stripe）組み込み</li>
-            <li class="flex gap-2"><span class="text-blue-400">✓</span> ランディングページ制作</li>
-            <li class="flex gap-2"><span class="text-blue-400">✓</span> 無料トライアル→有料転換の設計</li>
+      <!-- Pricing -->
+      <div class="grid md:grid-cols-3 gap-4 mb-8">
+        <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+          <p class="text-slate-400 text-xs uppercase tracking-widest mb-4">初期費用</p>
+          <p class="text-4xl font-bold text-white mb-0.5">¥300,000</p>
+          <p class="text-slate-500 text-xs mb-6">一回限り・税別</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">✓</span>業務ヒアリング・要件定義</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">✓</span>AIプロンプト設計（業種特化）</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">✓</span>Webアプリ開発・デプロイ</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">✓</span>Stripe決済機能組み込み</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">✓</span>ランディングページ制作</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">✓</span>無料→有料転換設計</li>
           </ul>
         </div>
-        <div class="bg-slate-800 rounded-2xl p-7 border border-slate-700">
-          <p class="text-slate-400 text-xs uppercase tracking-widest mb-3">月額固定</p>
-          <p class="text-4xl font-bold text-white mb-1">¥50,000</p>
-          <p class="text-slate-500 text-sm mb-6">月額・税別</p>
-          <ul class="space-y-2 text-sm text-slate-400">
-            <li class="flex gap-2"><span class="text-blue-400">✓</span> サーバー・インフラ運用</li>
-            <li class="flex gap-2"><span class="text-blue-400">✓</span> コールドメールGTM実行（30件/日）</li>
-            <li class="flex gap-2"><span class="text-blue-400">✓</span> 返信検知・フォローアップ自動化</li>
-            <li class="flex gap-2"><span class="text-blue-400">✓</span> AIプロンプトのPDCA改善</li>
-            <li class="flex gap-2"><span class="text-blue-400">✓</span> 機能追加・バグ対応</li>
-            <li class="flex gap-2"><span class="text-blue-400">✓</span> 月次レポート</li>
+        <div class="bg-slate-800 rounded-2xl p-6 border border-slate-700">
+          <p class="text-slate-400 text-xs uppercase tracking-widest mb-4">月額固定</p>
+          <p class="text-4xl font-bold text-white mb-0.5">¥50,000</p>
+          <p class="text-slate-500 text-xs mb-6">月額・税別</p>
+          <ul class="space-y-2 text-xs text-slate-400">
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">✓</span>サーバー・インフラ運用</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">✓</span>コールドメールGTM（30件/日）</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">✓</span>返信検知・フォローアップ自動化</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">✓</span>AIプロンプトPDCA改善</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">✓</span>機能追加・バグ対応</li>
+            <li class="flex gap-2"><span class="text-blue-400 mt-0.5">✓</span>月次レポート</li>
           </ul>
         </div>
-        <div class="bg-blue-900 rounded-2xl p-7 border border-blue-700">
-          <p class="text-blue-300 text-xs uppercase tracking-widest mb-3">成果報酬</p>
-          <p class="text-4xl font-bold text-white mb-1">売上の10%</p>
-          <p class="text-blue-300 text-sm mb-6">月次精算・上限なし</p>
-          <ul class="space-y-2 text-sm text-blue-200">
-            <li class="flex gap-2"><span class="text-yellow-400">✓</span> Stripe売上の10%を翌月末に精算</li>
-            <li class="flex gap-2"><span class="text-yellow-400">✓</span> Stripe閲覧権限の共有が条件</li>
-            <li class="flex gap-2"><span class="text-yellow-400">✓</span> 売上ゼロの月は発生なし</li>
-            <li class="flex gap-2"><span class="text-yellow-400">✓</span> 成長するほど両者が得をする設計</li>
+        <div class="bg-gradient-to-b from-blue-900 to-blue-950 rounded-2xl p-6 border border-blue-700">
+          <p class="text-blue-300 text-xs uppercase tracking-widest mb-4">成果報酬</p>
+          <p class="text-4xl font-bold text-white mb-0.5">売上の10%</p>
+          <p class="text-blue-400 text-xs mb-6">月次精算・上限なし</p>
+          <ul class="space-y-2 text-xs text-blue-200">
+            <li class="flex gap-2"><span class="text-yellow-400 mt-0.5">✓</span>Stripe売上の10%を翌月末精算</li>
+            <li class="flex gap-2"><span class="text-yellow-400 mt-0.5">✓</span>Stripe閲覧権限の共有が条件</li>
+            <li class="flex gap-2"><span class="text-yellow-400 mt-0.5">✓</span>売上ゼロの月は発生なし</li>
+            <li class="flex gap-2"><span class="text-yellow-400 mt-0.5">✓</span>ユーザーが増えるほど両者が得</li>
           </ul>
         </div>
       </div>
 
-      <div class="bg-slate-800 rounded-xl p-5 mb-10 text-sm text-slate-400">
-        <p class="text-slate-300 font-semibold mb-2">収益シミュレーション（クライアント側）</p>
-        <div class="grid md:grid-cols-3 gap-4">
-          <div>
-            <p class="text-slate-500 text-xs mb-1">ユーザー10人</p>
-            <p class="text-white">売上 <strong>¥89,800/月</strong></p>
-            <p class="text-slate-400">運用費 ¥50,000 + 成果報酬 ¥8,980</p>
-            <p class="text-green-400">手残り ¥30,820/月</p>
+      <!-- Revenue sim -->
+      <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/50 mb-8">
+        <p class="text-slate-300 font-semibold text-sm mb-4">収益シミュレーション（クライアント側）</p>
+        <div class="grid md:grid-cols-3 gap-4 text-sm">
+          <div class="bg-slate-900/60 rounded-lg p-4">
+            <p class="text-slate-500 text-xs mb-2">有料ユーザー 10人</p>
+            <p class="text-white font-semibold">売上 ¥89,800/月</p>
+            <p class="text-slate-400 text-xs mt-1">固定¥50,000 + 報酬¥8,980</p>
+            <p class="text-emerald-400 font-bold mt-2">手残り ¥30,820/月</p>
           </div>
-          <div>
-            <p class="text-slate-500 text-xs mb-1">ユーザー30人</p>
-            <p class="text-white">売上 <strong>¥269,400/月</strong></p>
-            <p class="text-slate-400">運用費 ¥50,000 + 成果報酬 ¥26,940</p>
-            <p class="text-green-400">手残り ¥192,460/月</p>
+          <div class="bg-slate-900/60 rounded-lg p-4">
+            <p class="text-slate-500 text-xs mb-2">有料ユーザー 30人</p>
+            <p class="text-white font-semibold">売上 ¥269,400/月</p>
+            <p class="text-slate-400 text-xs mt-1">固定¥50,000 + 報酬¥26,940</p>
+            <p class="text-emerald-400 font-bold mt-2">手残り ¥192,460/月</p>
           </div>
-          <div>
-            <p class="text-slate-500 text-xs mb-1">ユーザー50人</p>
-            <p class="text-white">売上 <strong>¥449,000/月</strong></p>
-            <p class="text-slate-400">運用費 ¥50,000 + 成果報酬 ¥44,900</p>
-            <p class="text-green-400">手残り ¥354,100/月</p>
+          <div class="bg-slate-900/60 rounded-lg p-4">
+            <p class="text-slate-500 text-xs mb-2">有料ユーザー 50人</p>
+            <p class="text-white font-semibold">売上 ¥449,000/月</p>
+            <p class="text-slate-400 text-xs mt-1">固定¥50,000 + 報酬¥44,900</p>
+            <p class="text-emerald-400 font-bold mt-2">手残り ¥354,100/月</p>
           </div>
         </div>
       </div>
 
       <!-- Options -->
-      <h3 class="text-lg font-bold text-white mb-4">オプション</h3>
-      <div class="grid md:grid-cols-2 gap-4 mb-10">
-        <div class="bg-slate-800 rounded-xl p-5 border border-slate-700 flex justify-between items-start">
+      <p class="text-sm font-semibold text-white mb-3">オプション</p>
+      <div class="grid md:grid-cols-2 gap-3 mb-10">
+        <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50 flex justify-between items-center">
           <div>
-            <p class="font-semibold text-white mb-1">管理画面</p>
-            <p class="text-slate-400 text-sm">ユーザー管理・コード発行・売上確認を自分で操作できる管理パネル</p>
+            <p class="font-semibold text-slate-200 text-sm">管理画面</p>
+            <p class="text-slate-500 text-xs mt-0.5">ユーザー管理・コード発行・売上確認パネル</p>
           </div>
-          <p class="text-blue-400 font-bold text-sm whitespace-nowrap ml-4">+¥50,000</p>
+          <p class="text-blue-400 font-bold text-sm ml-4 whitespace-nowrap">+¥50,000</p>
         </div>
-        <div class="bg-slate-800 rounded-xl p-5 border border-slate-700 flex justify-between items-start">
+        <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50 flex justify-between items-center">
           <div>
-            <p class="font-semibold text-white mb-1">カスタムドメイン対応</p>
-            <p class="text-slate-400 text-sm">独自ドメイン（yourcompany.ai など）でアプリを公開</p>
+            <p class="font-semibold text-slate-200 text-sm">カスタムドメイン</p>
+            <p class="text-slate-500 text-xs mt-0.5">yourcompany.ai など独自URLで公開</p>
           </div>
-          <p class="text-blue-400 font-bold text-sm whitespace-nowrap ml-4">+¥20,000</p>
+          <p class="text-blue-400 font-bold text-sm ml-4 whitespace-nowrap">+¥20,000</p>
         </div>
-        <div class="bg-slate-800 rounded-xl p-5 border border-slate-700 flex justify-between items-start">
+        <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50 flex justify-between items-center">
           <div>
-            <p class="font-semibold text-white mb-1">複数スタッフアカウント</p>
-            <p class="text-slate-400 text-sm">チーム全員が個別アカウントで使えるマルチユーザー設計</p>
+            <p class="font-semibold text-slate-200 text-sm">複数スタッフアカウント</p>
+            <p class="text-slate-500 text-xs mt-0.5">チーム全員が個別アカウントで利用</p>
           </div>
-          <p class="text-blue-400 font-bold text-sm whitespace-nowrap ml-4">+¥30,000</p>
+          <p class="text-blue-400 font-bold text-sm ml-4 whitespace-nowrap">+¥30,000</p>
         </div>
-        <div class="bg-slate-800 rounded-xl p-5 border border-slate-700 flex justify-between items-start">
+        <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50 flex justify-between items-center">
           <div>
-            <p class="font-semibold text-white mb-1">AIカスタマイズ</p>
-            <p class="text-slate-400 text-sm">過去の書類・社内スタイルをAIに学習させ、文体・フォーマットを統一</p>
+            <p class="font-semibold text-slate-200 text-sm">AIカスタマイズ</p>
+            <p class="text-slate-500 text-xs mt-0.5">社内の書類スタイル・文体をAIに学習</p>
           </div>
-          <p class="text-blue-400 font-bold text-sm whitespace-nowrap ml-4">+¥80,000</p>
-        </div>
-      </div>
-
-      <div class="bg-blue-950 border border-blue-800 rounded-xl p-6 mb-8">
-        <p class="text-blue-300 text-sm font-semibold mb-2">こんな方に向いています</p>
-        <div class="grid md:grid-cols-2 gap-2 text-sm text-slate-400">
-          <span>・書類作業が多い業種の経営者・管理職</span>
-          <span>・自社向けSaaSを売り出したい事業者</span>
-          <span>・既存のSaaSが高すぎて使えない中小企業</span>
-          <span>・特定業種に特化したAIツールを作りたい方</span>
+          <p class="text-blue-400 font-bold text-sm ml-4 whitespace-nowrap">+¥80,000</p>
         </div>
       </div>
 
       <div class="text-center">
-        <p class="text-slate-500 text-sm mb-4">まずはお気軽にご相談ください。業務内容をヒアリングして見積もりをお出しします。</p>
+        <p class="text-slate-500 text-sm mb-5">まずはお気軽にご相談ください。業務内容を聞いてから見積もりをお出しします。</p>
         <a href="mailto:ryuumg03@gmail.com?subject=AI SaaS制作のご相談&body=業種・業務内容・ご要望をお書きください。"
-           class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-full transition">
+           class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold px-10 py-4 rounded-full transition">
           無料相談する →
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Stats -->
-  <section class="py-20 px-6 bg-slate-900">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-bold mb-10 text-white">Numbers</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="text-center">
-          <p class="text-4xl font-bold text-blue-400 mb-1">11</p>
-          <p class="text-slate-500 text-sm">製品数</p>
-        </div>
-        <div class="text-center">
-          <p class="text-4xl font-bold text-blue-400 mb-1">100</p>
-          <p class="text-slate-500 text-sm">業種候補リスト</p>
-        </div>
-        <div class="text-center">
-          <p class="text-4xl font-bold text-blue-400 mb-1">30</p>
-          <p class="text-slate-500 text-sm">件/日 GTM</p>
-        </div>
-        <div class="text-center">
-          <p class="text-4xl font-bold text-blue-400 mb-1">¥0</p>
-          <p class="text-slate-500 text-sm">インフラ費用/月</p>
-        </div>
+  <!-- FAQ -->
+  <section class="py-24 px-6 bg-slate-950">
+    <div class="max-w-2xl mx-auto fade-in">
+      <p class="text-blue-400 text-xs font-mono mb-3 tracking-widest uppercase">FAQ</p>
+      <h2 class="text-3xl font-bold mb-10 text-white">よくある質問</h2>
+      <div class="space-y-3">
+        <details class="bg-slate-900 rounded-xl border border-slate-800 group">
+          <summary class="p-5 flex items-center justify-between text-slate-200 font-medium text-sm">
+            納期はどのくらいかかりますか？
+            <span class="text-slate-500 group-open:rotate-180 transition-transform text-lg">↓</span>
+          </summary>
+          <p class="px-5 pb-5 text-slate-400 text-sm leading-relaxed">ヒアリングから納品まで通常2〜3週間です。TextSeriesのテンプレートを使うため、一般的なWeb制作より大幅に短期間で納品できます。</p>
+        </details>
+        <details class="bg-slate-900 rounded-xl border border-slate-800 group">
+          <summary class="p-5 flex items-center justify-between text-slate-200 font-medium text-sm">
+            どんな業種でも対応できますか？
+            <span class="text-slate-500 group-open:rotate-180 transition-transform text-lg">↓</span>
+          </summary>
+          <p class="px-5 pb-5 text-slate-400 text-sm leading-relaxed">書類作成業務があれば基本的に対応できます。医療・金融・法律などは薬機法・金商法等の規制確認が必要なためヒアリング時に確認します。</p>
+        </details>
+        <details class="bg-slate-900 rounded-xl border border-slate-800 group">
+          <summary class="p-5 flex items-center justify-between text-slate-200 font-medium text-sm">
+            成果報酬の「売上」はどう計算しますか？
+            <span class="text-slate-500 group-open:rotate-180 transition-transform text-lg">↓</span>
+          </summary>
+          <p class="px-5 pb-5 text-slate-400 text-sm leading-relaxed">Stripeの月次売上（返金後の純額）の10%です。Stripe閲覧権限を共有いただくことで双方が同じ数字を確認できます。</p>
+        </details>
+        <details class="bg-slate-900 rounded-xl border border-slate-800 group">
+          <summary class="p-5 flex items-center justify-between text-slate-200 font-medium text-sm">
+            運用を途中でやめることはできますか？
+            <span class="text-slate-500 group-open:rotate-180 transition-transform text-lg">↓</span>
+          </summary>
+          <p class="px-5 pb-5 text-slate-400 text-sm leading-relaxed">月額契約なので1ヶ月前予告でいつでも解約できます。解約後もアプリとデータはそのまま引き継げます。</p>
+        </details>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="py-20 px-6 bg-slate-950">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl font-bold mb-8 text-white">Contact</h2>
-      <div class="flex flex-wrap gap-4">
+  <section id="contact" class="py-24 px-6 bg-slate-900">
+    <div class="max-w-3xl mx-auto fade-in text-center">
+      <p class="text-blue-400 text-xs font-mono mb-3 tracking-widest uppercase">Contact</p>
+      <h2 class="text-3xl font-bold mb-3 text-white">話しかけてください</h2>
+      <p class="text-slate-400 text-sm mb-10">受託相談・製品へのフィードバック・雑談、なんでも。</p>
+      <div class="flex flex-wrap justify-center gap-3">
         <a href="mailto:ryuumg03@gmail.com"
-           class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 px-5 py-3 rounded-full transition text-sm">
+           class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 px-5 py-3 rounded-full transition text-sm border border-slate-700">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
           ryuumg03@gmail.com
         </a>
-        <a href="https://github.com/ryuu321"
-           target="_blank"
-           class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 px-5 py-3 rounded-full transition text-sm">
+        <a href="https://github.com/ryuu321" target="_blank"
+           class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 px-5 py-3 rounded-full transition text-sm border border-slate-700">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-          ryuu321
+          GitHub
         </a>
-        <a href="https://x.com"
-           target="_blank"
-           class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 px-5 py-3 rounded-full transition text-sm">
+        <a href="https://x.com" target="_blank"
+           class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 px-5 py-3 rounded-full transition text-sm border border-slate-700">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           X (Twitter)
         </a>
-        <a href="https://note.com"
-           target="_blank"
-           class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 px-5 py-3 rounded-full transition text-sm">
-          <span class="font-bold text-xs">note</span>
+        <a href="https://note.com" target="_blank"
+           class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 px-5 py-3 rounded-full transition text-sm border border-slate-700">
+          <span class="font-black text-sm">n</span>
           note
         </a>
       </div>
@@ -394,9 +426,27 @@
   </section>
 
   <!-- Footer -->
-  <footer class="py-8 px-6 text-center text-slate-600 text-xs border-t border-slate-900">
-    <p>© 2026 真柄 龍聖 — AI Holdings</p>
+  <footer class="py-6 px-6 text-center text-slate-600 text-xs border-t border-slate-900">
+    <p>© 2026 真柄 龍聖 / AI Holdings &nbsp;—&nbsp; <a href="mailto:ryuumg03@gmail.com" class="hover:text-slate-400 transition">ryuumg03@gmail.com</a></p>
   </footer>
 
+  <!-- Back to top -->
+  <button id="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    class="fixed bottom-6 right-6 w-10 h-10 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-400 rounded-full text-sm transition opacity-0 pointer-events-none flex items-center justify-center">
+    ↑
+  </button>
+
+  <script>
+    // Fade in on scroll
+    const obs = new IntersectionObserver(els => els.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+    // Back to top button
+    const btn = document.getElementById('top-btn');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 400) { btn.style.opacity='1'; btn.style.pointerEvents='auto'; }
+      else { btn.style.opacity='0'; btn.style.pointerEvents='none'; }
+    });
+  </script>
 </body>
 </html>
