@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>真柄 龍聖 — AI SaaS Builder</title>
+  <meta name="description" content="日本中小企業向けAI文書生成SaaSを開発しています。TextSeriesシリーズ開発者。">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+    .card-hover { transition: transform 0.2s, box-shadow 0.2s; }
+    .card-hover:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+    .tag { display: inline-block; font-size: 0.7rem; padding: 2px 8px; border-radius: 9999px; font-weight: 600; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans">
+
+  <!-- Hero -->
+  <section class="gradient-bg min-h-screen flex flex-col justify-center px-6 py-24">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-blue-400 text-sm font-mono mb-4 tracking-widest">RYUSEI MAGARA / 真柄 龍聖</p>
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 text-white">
+        AI SaaS Builder
+      </h1>
+      <p class="text-slate-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+        日本の中小企業・士業向けに、AI文書生成SaaSを開発しています。<br>
+        月数万円の書類作業を30秒に圧縮するツール群 <strong class="text-white">TextSeries</strong> を連続リリース中。
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <a href="mailto:ryuumg03@gmail.com"
+           class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full transition text-sm">
+          お問い合わせ
+        </a>
+        <a href="https://note.com"
+           target="_blank"
+           class="border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white font-semibold px-6 py-3 rounded-full transition text-sm">
+          note を読む →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-20 px-6 bg-slate-900">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-bold mb-8 text-white">About</h2>
+      <div class="grid md:grid-cols-2 gap-8 text-slate-400 text-sm leading-relaxed">
+        <div>
+          <p class="mb-4">
+            法的リスクなし・即収益化・スケール可能の3原則で事業を設計。
+            専門家が毎回ゼロから作っている書類作成をAIで自動化し、
+            <strong class="text-slate-200">月額¥8,980〜</strong>のSaaSとして提供しています。
+          </p>
+          <p>
+            ターゲットは社会保険労務士・行政書士・税理士・介護事業所・建設業者など、
+            書類業務が多く・IT化が遅れている日本の中小企業・士業事務所。
+          </p>
+        </div>
+        <div>
+          <p class="mb-4">
+            技術スタック: Python / Streamlit / Supabase / Stripe / Google Gemini API / GitHub Actions
+          </p>
+          <p>
+            GTM: コールドメール（30件/日・特定電子メール法準拠）で獲得した見込み客に
+            無料トライアル→有料転換のファネルを自動化。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-20 px-6 bg-slate-950">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-2xl font-bold mb-2 text-white">TextSeries</h2>
+      <p class="text-slate-500 text-sm mb-10">AI文書生成SaaS群 — 業種特化・月額¥8,980〜</p>
+      <div class="grid md:grid-cols-2 gap-4">
+
+        <!-- SharoText -->
+        <a href="https://ryuu321.github.io/ai-holdings/docs/sharotext.html"
+           target="_blank"
+           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-white">SharoText</span>
+            <span class="tag bg-green-900 text-green-400">稼働中</span>
+          </div>
+          <p class="text-slate-500 text-xs mb-2">社会保険労務士事務所</p>
+          <p class="text-slate-400 text-sm">就業規則・36協定届・助成金申請書の文案をAIが自動生成</p>
+        </a>
+
+        <!-- GyoText -->
+        <a href="https://ryuu321.github.io/ai-holdings/docs/gyotext.html"
+           target="_blank"
+           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-white">GyoText</span>
+            <span class="tag bg-green-900 text-green-400">稼働中</span>
+          </div>
+          <p class="text-slate-500 text-xs mb-2">行政書士事務所</p>
+          <p class="text-slate-400 text-sm">許認可申請書・定款・各種届出書の文案をAIが自動生成</p>
+        </a>
+
+        <!-- CareText -->
+        <a href="https://ryuu321.github.io/ai-holdings/docs/caretext.html"
+           target="_blank"
+           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-white">CareText</span>
+            <span class="tag bg-blue-900 text-blue-400">デプロイ済み</span>
+          </div>
+          <p class="text-slate-500 text-xs mb-2">訪問介護事業所</p>
+          <p class="text-slate-400 text-sm">個別支援計画・サービス提供記録・ヒヤリハット報告書</p>
+        </a>
+
+        <!-- KenText -->
+        <a href="https://ryuu321.github.io/ai-holdings/docs/kentext.html"
+           target="_blank"
+           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-white">KenText</span>
+            <span class="tag bg-green-900 text-green-400">稼働中</span>
+          </div>
+          <p class="text-slate-500 text-xs mb-2">建設設計事務所</p>
+          <p class="text-slate-400 text-sm">確認申請書・仕様書・工事監理報告書の文案をAIが自動生成</p>
+        </a>
+
+        <!-- TaxText -->
+        <a href="https://ryuu321.github.io/ai-holdings/docs/taxtext.html"
+           target="_blank"
+           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-white">TaxText</span>
+            <span class="tag bg-blue-900 text-blue-400">デプロイ済み</span>
+          </div>
+          <p class="text-slate-500 text-xs mb-2">税理士事務所</p>
+          <p class="text-slate-400 text-sm">税務申告書・経営計画書・融資相談用資料の文案をAIが自動生成</p>
+        </a>
+
+        <!-- FudoText -->
+        <a href="https://ryuu321.github.io/ai-holdings/docs/fudotext.html"
+           target="_blank"
+           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-white">FudoText</span>
+            <span class="tag bg-green-900 text-green-400">稼働中</span>
+          </div>
+          <p class="text-slate-500 text-xs mb-2">不動産仲介会社</p>
+          <p class="text-slate-400 text-sm">物件紹介文・重要事項説明・契約書類の文案をAIが自動生成</p>
+        </a>
+
+        <!-- DayText -->
+        <a href="https://ryuu321.github.io/ai-holdings/docs/daytext.html"
+           target="_blank"
+           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-white">DayText</span>
+            <span class="tag bg-yellow-900 text-yellow-400">リリース準備中</span>
+          </div>
+          <p class="text-slate-500 text-xs mb-2">通所介護（デイサービス）</p>
+          <p class="text-slate-400 text-sm">個別機能訓練計画書・モニタリング報告書の文案をAIが自動生成</p>
+        </a>
+
+        <!-- PharmText -->
+        <a href="https://ryuu321.github.io/ai-holdings/docs/pharmtext.html"
+           target="_blank"
+           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-white">PharmText</span>
+            <span class="tag bg-yellow-900 text-yellow-400">リリース準備中</span>
+          </div>
+          <p class="text-slate-500 text-xs mb-2">調剤薬局</p>
+          <p class="text-slate-400 text-sm">薬歴（SOAP形式）・服薬指導記録の文案をAIが自動生成</p>
+        </a>
+
+        <!-- CmText -->
+        <a href="https://ryuu321.github.io/ai-holdings/docs/cmtext.html"
+           target="_blank"
+           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-white">CmText</span>
+            <span class="tag bg-yellow-900 text-yellow-400">リリース準備中</span>
+          </div>
+          <p class="text-slate-500 text-xs mb-2">居宅介護支援（ケアマネ）</p>
+          <p class="text-slate-400 text-sm">ケアプラン・アセスメントシート・モニタリング記録をAIが自動生成</p>
+        </a>
+
+        <!-- KanriText -->
+        <a href="https://ryuu321.github.io/ai-holdings/docs/kanritext.html"
+           target="_blank"
+           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-white">KanriText</span>
+            <span class="tag bg-yellow-900 text-yellow-400">リリース準備中</span>
+          </div>
+          <p class="text-slate-500 text-xs mb-2">不動産管理会社</p>
+          <p class="text-slate-400 text-sm">管理委託契約書・修繕提案書・入退去精算書をAIが自動生成</p>
+        </a>
+
+        <!-- DenkiText -->
+        <a href="https://ryuu321.github.io/ai-holdings/docs/denkitext.html"
+           target="_blank"
+           class="card-hover bg-slate-900 rounded-xl p-5 border border-slate-800 block">
+          <div class="flex items-center justify-between mb-3">
+            <span class="font-bold text-white">DenkiText</span>
+            <span class="tag bg-yellow-900 text-yellow-400">リリース準備中</span>
+          </div>
+          <p class="text-slate-500 text-xs mb-2">電気工事業者</p>
+          <p class="text-slate-400 text-sm">電気工事完了報告書・検査成績書・施工計画書をAIが自動生成</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-20 px-6 bg-slate-900">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-bold mb-10 text-white">Numbers</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <p class="text-4xl font-bold text-blue-400 mb-1">11</p>
+          <p class="text-slate-500 text-sm">製品数</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-bold text-blue-400 mb-1">100</p>
+          <p class="text-slate-500 text-sm">業種候補リスト</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-bold text-blue-400 mb-1">30</p>
+          <p class="text-slate-500 text-sm">件/日 GTM</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-bold text-blue-400 mb-1">¥0</p>
+          <p class="text-slate-500 text-sm">インフラ費用/月</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="py-20 px-6 bg-slate-950">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl font-bold mb-8 text-white">Contact</h2>
+      <div class="flex flex-wrap gap-4">
+        <a href="mailto:ryuumg03@gmail.com"
+           class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 px-5 py-3 rounded-full transition text-sm">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+          ryuumg03@gmail.com
+        </a>
+        <a href="https://github.com/ryuu321"
+           target="_blank"
+           class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 px-5 py-3 rounded-full transition text-sm">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          ryuu321
+        </a>
+        <a href="https://x.com"
+           target="_blank"
+           class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 px-5 py-3 rounded-full transition text-sm">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          X (Twitter)
+        </a>
+        <a href="https://note.com"
+           target="_blank"
+           class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-300 px-5 py-3 rounded-full transition text-sm">
+          <span class="font-bold text-xs">note</span>
+          note
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-6 text-center text-slate-600 text-xs border-t border-slate-900">
+    <p>© 2026 真柄 龍聖 — AI Holdings</p>
+  </footer>
+
+</body>
+</html>
